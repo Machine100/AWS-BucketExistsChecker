@@ -1,15 +1,15 @@
 import boto3
 import botocore
-s3 = boto3.client('s3')
+s3resource = boto3.resource('s3')
 
-bucket = s3.Bucket(word)     
-exists = true     
+bucket = s3resource.Bucket('word')     
+exists = True     
 try:
-	s3.meta.client.head_bucket('name')     
+	s3resource.meta.client.head_bucket('name')     
 
 except botocore.exceptions.ClientError as e:         
 		# if a client error is thrown, then check that it was a 404 error
 		# if it was a 404 error, then the bucket does not exist
 	error_code = e.response['Error']['Code']         
 	if error_code == '404':
-		exists=false
+		exists=False
