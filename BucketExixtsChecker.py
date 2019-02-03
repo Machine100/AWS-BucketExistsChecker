@@ -13,3 +13,4 @@ except botocore.exceptions.ClientError as e:
 	error_code = e.response['Error']['Code']         
 	if error_code == '404':
 		exists=False
+print (exists)
