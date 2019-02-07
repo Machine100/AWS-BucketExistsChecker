@@ -1,7 +1,6 @@
 # AWS-BucketExistsChecker
 Does a named bucket exist? Check for it the right way.
 
-The main snippet of code is pulled from the official BOTO3 documentation.
+Best practice to check for the existance of a bucket is to make a call to the resource object.
 
-To check for the existance of a bucket a call is made to the S3 resource object.
-
+The main snippet of code is pulled from official BOTO3 documentation.
